@@ -1,0 +1,31 @@
+{
+  "heroes": [
+    {
+      "id": 2,
+      "name": "Bruce Wayne",
+      "nickName": "Batman",
+      "age": 45,
+      "company": "Dc Comics",
+      "power": "Hombre murcileago",
+      "height": 190
+    },
+    {
+      "id": 3,
+      "name": "Dr Henry Hank Pym",
+      "nickName": "Ant man",
+      "age": 60,
+      "company": "Marvel",
+      "power": "Controla las hormigas",
+      "height": 175
+    },
+    {
+      "id": 4,
+      "name": "Tony Stark",
+      "nickName": "IRON MAN",
+      "age": 45,
+      "company": "Marvel",
+      "power": "Inteligencia y traje robótico",
+      "height": 175
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+
+<mat-card>
+    <div class="container">
+        <div class="container_header">
+            <p>Lista de heroes</p>
+            <button mat-mini-fab color="primary" (click)="addHero()" aria-label="add hero" matTooltip="Agregar nuevo heroe">
+                <mat-icon>add</mat-icon>
+            </button>
+        </div>
+        <ng-container *ngIf="dataHero$ | async as dataHero">
+            <app-table  [columnsTable]="columnsTable"
+                        [dataSource]="dataHero"
+                        [displayedColumns]="displayedColumns"
+                        [actions]= "actions"
+                        (action)="doAction($event)"
+                        (filter)="searcHeroByName($event)">
+            </app-table>
+        </ng-container>
+    </div>
+</mat-card>
+
+

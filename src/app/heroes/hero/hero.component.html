@@ -1,0 +1,50 @@
+<mat-card>
+    <div class="container">
+        <a class="return" routerLink="/hero">Volver</a>
+        <div  class="container_header">
+            <p *ngIf="!edit">Crear nuevo heroe</p>
+            <p *ngIf="edit">
+                <span>Editar</span>
+                <span appTitle>{{hero.nickName}}</span>
+            </p>
+        </div>
+        <form [formGroup]="heroForm" (ngSubmit)="submitForm()">
+            <div class="container_form">
+                <mat-form-field appearance="legacy">
+                    <mat-label>Nombre</mat-label>
+                    <input formControlName="name" matInput placeholder="Nombre">
+                    <mat-error>Nombre es requerido</mat-error>
+                  </mat-form-field>
+                  <mat-form-field appearance="legacy">
+                    <mat-label>Nombre heroe</mat-label>
+                    <input UpperCase formControlName="nickName" matInput placeholder="Heroe">
+                    <mat-error>Nombre heroe es requerido</mat-error>
+                  </mat-form-field>
+                  <mat-form-field appearance="legacy">
+                    <mat-label>Edad</mat-label>
+                    <input formControlName="age" matInput placeholder="Edad" type="number">
+                    <mat-error>Edad es requerida</mat-error>
+                  </mat-form-field>
+                  <mat-form-field appearance="legacy">
+                    <mat-label>Empresa</mat-label>
+                    <input formControlName="company" matInput placeholder="Empresa">
+                    <mat-error>Empresa es requerida</mat-error>
+                  </mat-form-field>
+                  <mat-form-field appearance="legacy">
+                    <mat-label>Poder</mat-label>
+                    <input formControlName="power" matInput placeholder="Poder">
+                    <mat-error>Poder es requerido</mat-error>
+                  </mat-form-field>
+                  <mat-form-field appearance="legacy">
+                    <mat-label>Altura</mat-label>
+                    <input formControlName="height" matInput placeholder="Altura" type="number">
+                    <mat-error>Altura es requerida</mat-error>
+                  </mat-form-field>
+            </div>
+            <div class="center">
+                <button mat-stroked-button color="primary" type="submit">Guardar</button>
+            </div>
+        </form>
+    </div>
+</mat-card>
+

@@ -1,0 +1,12 @@
+.container_form {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+    padding: 50px 50px;
+    margin: 30px 30px;
+    justify-content: center;
+}
+
+.conainer button{
+    text-align: center;
+}
