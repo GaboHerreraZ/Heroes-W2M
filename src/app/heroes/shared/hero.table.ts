@@ -2,37 +2,37 @@ import { ColumnsTable } from "src/app/shared/models/columns";
 
 export const HeroTable: ColumnsTable[] = [
     {
-        title: 'Id',
+        title: 'heroTable.id',
         responseName: 'id',
         type: 'number'
     },
     {
-        title: 'Nombre',
+        title: 'heroTable.name',
         responseName: 'name',
         type: 'string'
     },
     {
-        title: 'Heroe',
+        title: 'heroTable.hero',
         responseName: 'nickName',
         type: 'string'
     },
     {
-        title: 'Edad',
+        title: 'heroTable.age',
         responseName: 'age',
         type: 'string'
     },
     {
-        title: 'Franquicia',
+        title: 'heroTable.company',
         responseName: 'company',
         type: 'string'
     },
     {
-        title: 'Poder',
+        title: 'heroTable.power',
         responseName: 'power',
         type: 'string'
     },
     {
-        title: 'Estatura',
+        title: 'heroTable.height',
         responseName: 'height',
         type: 'number'
     }

@@ -8,9 +8,12 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { MaterialModule } from '../shared/modules/material.module';
 import { TableModule } from '../shared/table/table.module';
 import { HeroService } from './shared/hero.service';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { UpperCaseDirective } from '../shared/directive/uppercase.directive';
 import { HeroMessageComponent } from './hero-message/hero-message.component';
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { CustomtranslateModule } from '../shared/modules/custom-translate.module';
 
 
 @NgModule({
@@ -27,7 +30,8 @@ import { HeroMessageComponent } from './hero-message/hero-message.component';
     ReactiveFormsModule,
     TableModule,
     HttpClientModule,
-    MaterialModule
+    MaterialModule,
+    CustomtranslateModule
   ],
   providers: []
 })

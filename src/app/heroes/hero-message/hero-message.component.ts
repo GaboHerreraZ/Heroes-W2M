@@ -11,8 +11,7 @@ export class HeroMessageComponent implements OnInit {
 
   hero: Hero;
 
-  constructor(public dialogRef: MatDialogRef<HeroMessageComponent>,
-              @Inject(MAT_DIALOG_DATA) public data: any) { }
+  constructor(@Inject(MAT_DIALOG_DATA) public data: any) { }
 
   ngOnInit(): void {
     this.hero = this.data;

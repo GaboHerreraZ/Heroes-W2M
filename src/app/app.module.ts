@@ -11,6 +11,11 @@ import { MaterialModule } from './shared/modules/material.module';
 import { ToastrModule } from 'ngx-toastr';
 import { InterceptorModule } from './shared/modules/interceptor.module';
 import { LoadingModule } from './shared/loading/loading.module';
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { HttpClient } from '@angular/common/http';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { CustomtranslateModule } from './shared/modules/custom-translate.module';
+import { CustomLoader } from './shared/models/custom-loader';
 
 @NgModule({
   declarations: [
@@ -25,7 +30,15 @@ import { LoadingModule } from './shared/loading/loading.module';
     MaterialModule,
     ToastrModule.forRoot(),
     InterceptorModule,
-    LoadingModule
+    LoadingModule,
+    TranslateModule.forRoot({
+      defaultLanguage: 'es',
+      loader: {
+        provide: TranslateLoader,
+        useClass: CustomLoader,
+        deps: [ HttpClient ]
+      }
+    })
   ],
   providers: [
   ],

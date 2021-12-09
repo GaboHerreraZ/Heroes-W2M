@@ -20,7 +20,7 @@ export class TableComponent implements OnInit, AfterViewInit {
   @Input() actions: Action[];
   @Input() columnsTable: ColumnsTable[];
   @Input() displayedColumns: string[];
-  @Input() dataSource: MatTableDataSource<any>;
+  @Input() dataSource: MatTableDataSource<any> = new MatTableDataSource();
 
 
   //Outputs

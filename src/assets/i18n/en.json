@@ -1,0 +1,44 @@
+{
+    "titles": {
+        "appDescription": "Hero managment app",
+        "welcome": "Welcome to the heroes website",
+        "welcomeDescription": "Please, select the box to access the heroes management side",
+        "heroes": "Heroes",
+        "heroesIntroduction": "Login to see all the heroes, edit and create new ones",
+        "heroesList": "Heroes list",
+        "deleteHero": "Delete hero",
+        "questionDeleteHero1": "¿Are you sure to delete",
+        "questionDeleteHero2": " from the heroes list?"
+    },
+    "heroTable": {
+        "id": "Id",
+        "name": "Name",
+        "hero": "Hero",
+        "age": "Age",
+        "company": "Company",
+        "power": "Power",
+        "height": "Height",
+        "actions": "Actions",
+        "filter": "Filter by"
+    },
+    "heroForm": {
+        "back": "Back",
+        "createHero": "Add new hero",
+        "name": "Name",
+        "heroName": "Hero name",
+        "age": "Age",
+        "height": "Height",
+        "power": "Power",
+        "company": "Company",
+        "save": "Save",
+        "edit": "Edit",
+        "errors": {
+            "requiredName": "Name is required",
+            "requiredHeroName": "Hero name is required",
+            "requiredAge": "Age is required",
+            "requiredCompanu": "Company is required",
+            "requiredPower": "Power is required",
+            "requiredHeight": "Height is required"
+        }
+    }
+}

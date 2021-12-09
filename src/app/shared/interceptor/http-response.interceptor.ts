@@ -14,17 +14,17 @@ import { LoadingService } from '../loading/shared/loading.service';
 @Injectable()
 export class HttpResponseInterceptor implements HttpInterceptor {
 
-  constructor(private toastServie: ToastrService, private loadinService: LoadingService) {}
+  constructor(private toastServie: ToastrService, private loadingService: LoadingService) {}
 
   intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<unknown>> {
-    this.loadinService.startLoading();
+    this.loadingService.startLoading();
     return next.handle(request).pipe(
       filter(response => response instanceof HttpResponse),
       map(result => {
         if(request.method != 'GET') {
           this.toastServie.success('Operación realizada correctamente');
         }
-        this.loadinService.stopLoading();
+        this.loadingService.stopLoading();
         return result;
       })
     );

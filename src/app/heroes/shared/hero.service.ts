@@ -12,8 +12,7 @@ import { Hero } from './hero.model';
 export class HeroService {
   private URL: string;
 
-  constructor(private http: HttpClient,
-              private activeRoute: ActivatedRoute) {
+  constructor(private http: HttpClient) {
     this.URL = `${environment.api.endPoint}/heroes`;
   }
 

@@ -1,6 +1,11 @@
 <mat-toolbar color="primary">
-    <button routerLink="/home" mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+    <button routerLink="/home" mat-icon-button aria-label="Example icon-button with menu icon">
       <mat-icon>article</mat-icon>
     </button>
-    <span>Aplicación para la gestión de heroes</span>
+    <span>{{'titles.appDescription' | translate}}</span>
+    <span class="spacer"></span>
+    <button mat-button [matMenuTriggerFor]="menu"><img class="flag" [src]="flag.url"> {{flag.title}}</button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item *ngFor="let flag of flags"  (click)="select(flag)"><img class="flag" [src]="flag.url"> {{flag.title}}</button>
+    </mat-menu>
 </mat-toolbar>

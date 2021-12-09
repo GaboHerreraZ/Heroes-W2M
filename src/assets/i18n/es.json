@@ -1,0 +1,44 @@
+{
+    "titles": {
+        "appDescription": "Aplicación para la gestión de heroes",
+        "welcome": "Bienvenidos a la página de heroes",
+        "welcomeDescription": "Por favor, seleccione el recuadro para acceder a la gestión de los heroes",
+        "heroes": "Heroes",
+        "heroesIntroduction": "Ingresa para ver todos los heroes, editar y crear nuevos",
+        "heroesList": "Lista de heroes",
+        "deleteHero": "Eliminar heroe",
+        "questionDeleteHero1": "¿Está seguro de eliminar",
+        "questionDeleteHero2": " de la lista de heroes?"
+    },
+    "heroTable": {
+        "id": "Id",
+        "name": "Nombre",
+        "hero": "Heroe",
+        "age": "Edad",
+        "company": "Franquicia",
+        "power": "Poder",
+        "height": "Estatura",
+        "actions": "Acciones",
+        "filter": "Filtrar por"
+    },
+    "heroForm": {
+        "back": "Volver",
+        "createHero": "Crear nuevo heroe",
+        "name": "Nombre",
+        "heroName": "Nombre heroe",
+        "age": "Edad",
+        "height": "Estatura",
+        "power": "Poder",
+        "company": "Franquicia",
+        "save": "Guardar",
+        "edit": "Editar",
+        "errors": {
+            "requiredName": "Nombre es requerido",
+            "requiredHeroName": "Nombre heroe es requerido",
+            "requiredAge": "Edad es requerida",
+            "requiredCompanu": "Empresa es requerida",
+            "requiredPower": "Poder es requerido",
+            "requiredHeight": "Estatura es requerida"
+        }
+    }
+}

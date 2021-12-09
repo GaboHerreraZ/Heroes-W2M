@@ -1,0 +1,10 @@
+.spacer {
+    flex: 1 1 auto;
+  }
+
+.flag {
+    width: 16px;
+    height: 11px;
+    margin-top: -0.18em;
+    display: inline-block;
+}
