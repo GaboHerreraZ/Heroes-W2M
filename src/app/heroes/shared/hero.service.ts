@@ -42,7 +42,7 @@ export class HeroService {
   }
 
 
-  private getHeroById(id: number): Observable<Hero> {
+  getHeroById(id: number): Observable<Hero> {
     const url = `${this.URL}/${id}`
     return this.http.get<Hero>(url);
   }

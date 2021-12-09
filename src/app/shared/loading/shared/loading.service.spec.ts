@@ -13,4 +13,16 @@ describe('LoadingService', () => {
   it('should be created', () => {
     expect(service).toBeTruthy();
   });
+
+  it('[startLoading] Start loading', () => {
+    service.startLoading();
+    expect(service.loading).toEqual(true);
+  });
+
+  it('[stopLoading] Stop loading', () => {
+    service.stopLoading();
+    expect(service.loading).toEqual(false);
+  });
+
+
 });

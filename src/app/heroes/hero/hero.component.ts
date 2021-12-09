@@ -52,7 +52,7 @@ export class HeroComponent implements OnInit , OnDestroy{
     });
   }
 
-  private editHero(hero: Hero) {
+  private editHero(hero: Hero): void {
     this.subscription.add(this.heroService.editHero(hero).subscribe(
       () => {
         this.heroForm.reset();
@@ -70,7 +70,7 @@ export class HeroComponent implements OnInit , OnDestroy{
     ));
   }
 
-  private getHero() {
+  private getHero(): void {
     this.subscription.add(this.activeRoute.data.pipe(
         tap(()=> this.getForm()),
         map(data => data.data)
@@ -86,7 +86,7 @@ export class HeroComponent implements OnInit , OnDestroy{
   }
 
 
-  ngOnDestroy() {
+  ngOnDestroy(): void {
     this.subscription.unsubscribe();
   }
 

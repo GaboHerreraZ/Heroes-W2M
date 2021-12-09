@@ -2,8 +2,8 @@ export interface Hero {
     id: number;
     name: string;
     nickName: string;
-    age: string;
+    age: number;
     company: string;
     power: string;
-    height: string;
+    height: number;
 }
