@@ -62,19 +62,16 @@ describe('HeroService', () => {
 
   it('[deleteHeroById] delete hero of heroes list', () => {
     const id = 1;
-    service.deleteHeroById(id).subscribe((res: Hero[]) => {
-      console.log(res);
-      expect(res).toEqual(heroes);
-      expect(res.length).toEqual(2);
+    service.deleteHeroById(id).subscribe(res => {
+      expect(res).toEqual(true);
     });
       const req = httpMock.expectOne( `${URL}/${id}`);
       expect(req.request.method).toBe('DELETE');
-      req.flush(heroes);
+      req.flush(true);
   });
 
   it('[addHero] Add new hero', () => {
     service.addHero(heroes[0]).subscribe((res: Hero) => {
-      console.log(res);
       expect(res).toEqual(heroes[0]);
     });
       const req = httpMock.expectOne( `${URL}`);

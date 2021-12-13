@@ -1,7 +1,10 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
-import { HeroListComponent } from './hero-list/hero-list.component';
-import { HeroComponent } from './hero/hero.component';
+import { 
+  RouterModule, 
+  Routes 
+} from '@angular/router';
+import { HeroListComponent } from './hero-list/component/hero-list.component';
+import { HeroComponent } from './hero/component/hero.component';
 import { HeroService } from './shared/hero.service';
 
 const routes: Routes = [

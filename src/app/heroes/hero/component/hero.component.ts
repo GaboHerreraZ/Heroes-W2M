@@ -1,10 +1,24 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { ActivatedRoute, Router } from '@angular/router';
+import { 
+  Component, 
+  OnDestroy, 
+  OnInit 
+} from '@angular/core';
+import { 
+  FormBuilder, 
+  FormGroup, 
+  Validators 
+} from '@angular/forms';
+import { 
+  ActivatedRoute, 
+  Router 
+} from '@angular/router';
 import { Subscription } from 'rxjs';
-import { map, tap } from 'rxjs/operators';
-import { Hero } from '../shared/hero.model';
-import { HeroService } from '../shared/hero.service';
+import { 
+  map, 
+  tap 
+} from 'rxjs/operators';
+import { Hero } from '../../shared/hero.model';
+import { HeroService } from '../../shared/hero.service';
 
 @Component({
   selector: 'app-hero',
@@ -85,13 +99,8 @@ export class HeroComponent implements OnInit , OnDestroy{
       ));
   }
 
-
   ngOnDestroy(): void {
     this.subscription.unsubscribe();
   }
 
-
 }
-
-
-

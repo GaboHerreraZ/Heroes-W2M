@@ -1,37 +1,20 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
 import { HeroesRoutingModule } from './heroes-routing.module';
-import { HeroListComponent } from './hero-list/hero-list.component';
-import { HeroComponent } from './hero/hero.component';
-import { ReactiveFormsModule } from '@angular/forms';
-import { MaterialModule } from '../shared/modules/material.module';
-import { TableModule } from '../shared/table/table.module';
-import { HeroService } from './shared/hero.service';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
-import { UpperCaseDirective } from '../shared/directive/uppercase.directive';
-import { HeroMessageComponent } from './hero-message/hero-message.component';
-import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
-import { TranslateHttpLoader } from '@ngx-translate/http-loader';
-import { CustomtranslateModule } from '../shared/modules/custom-translate.module';
+import { HeroModule } from './hero/hero.module';
+import { HeroListModule } from './hero-list/hero-list.module';
+import { HeroMessageModule } from './hero-message/hero-message.module';
 
 
 @NgModule({
   declarations: [
-    HeroListComponent,
-    HeroComponent,
-    UpperCaseDirective,
-    HeroMessageComponent
-
   ],
   imports: [
     CommonModule,
     HeroesRoutingModule,
-    ReactiveFormsModule,
-    TableModule,
-    HttpClientModule,
-    MaterialModule,
-    CustomtranslateModule
+    HeroListModule,
+    HeroModule,
+    HeroMessageModule
   ],
   providers: []
 })

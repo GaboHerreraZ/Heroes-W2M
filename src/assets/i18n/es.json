@@ -8,7 +8,10 @@
         "heroesList": "Lista de heroes",
         "deleteHero": "Eliminar heroe",
         "questionDeleteHero1": "¿Está seguro de eliminar",
-        "questionDeleteHero2": " de la lista de heroes?"
+        "questionDeleteHero2": " de la lista de heroes?",
+        "delete": "Eliminar",
+        "close": "Cerrar",
+        "information": "Información"
     },
     "heroTable": {
         "id": "Id",
@@ -19,7 +22,11 @@
         "power": "Poder",
         "height": "Estatura",
         "actions": "Acciones",
-        "filter": "Filtrar por"
+        "filter": "Filtrar por heroe"
+    },
+    "messages": {
+        "ok": "Operación realizada correctamente",
+        "noData": "No hay datos para filtrar por"
     },
     "heroForm": {
         "back": "Volver",

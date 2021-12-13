@@ -1,15 +1,29 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { 
+  Component, 
+  OnDestroy, 
+  OnInit 
+} from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { MatTableDataSource } from '@angular/material/table';
-import { ActivatedRoute, Router } from '@angular/router';
-import { BehaviorSubject, Observable, Subject, Subscription } from 'rxjs';
-import { filter, map, mergeMap, startWith, tap } from 'rxjs/operators';
-import { HeroMessageComponent } from '../hero-message/hero-message.component';
-import { HeroActions } from '../shared/hero.actions';
-
-import { Hero } from '../shared/hero.model';
-import { HeroService } from '../shared/hero.service';
-import { HeroTable } from '../shared/hero.table';
+import { 
+  ActivatedRoute, 
+  Router 
+} from '@angular/router';
+import { 
+  BehaviorSubject, 
+  Observable, 
+  Subscription 
+} from 'rxjs';
+import { 
+  filter, 
+  map, 
+  mergeMap  
+} from 'rxjs/operators';
+import { HeroMessageComponent } from '../../hero-message/component/hero-message.component';
+import { HeroActions } from '../../shared/hero.actions';
+import { Hero } from '../../shared/hero.model';
+import { HeroService } from '../../shared/hero.service';
+import { HeroTable } from '../../shared/hero.table';
 
 @Component({
   selector: 'app-hero-list',

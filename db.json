@@ -17,15 +17,6 @@
       "company": "Marvel",
       "power": "Controla las hormigas",
       "height": 175
-    },
-    {
-      "id": 4,
-      "name": "Tony Stark",
-      "nickName": "IRON MAN",
-      "age": 45,
-      "company": "Marvel",
-      "power": "Inteligencia y traje robótico",
-      "height": 175
     }
   ]
 }

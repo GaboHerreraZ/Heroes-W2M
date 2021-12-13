@@ -1,5 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { 
+  Component, 
+  OnInit 
+} from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
+import { Flag } from './shared/flag.model';
 
 @Component({
   selector: 'app-navbar',
@@ -23,7 +27,7 @@ export class NavbarComponent implements OnInit {
     }
   ]
 
-  flag: any;
+  flag: Flag;
 
   constructor(private translate: TranslateService) {
     this.flag = this.flags[0];
@@ -34,8 +38,7 @@ export class NavbarComponent implements OnInit {
   ngOnInit(): void {
   }
 
-
-  select(flag: any): void {
+  select(flag: Flag): void {
     this.flag = flag;
     this.translate.use(this.flag.name);
   }

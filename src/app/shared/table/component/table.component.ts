@@ -1,4 +1,14 @@
-import { AfterViewInit, Component, EventEmitter, Input, OnInit, Output, ViewChild } from '@angular/core';
+import { 
+  AfterViewInit, 
+  Component, 
+  EventEmitter, 
+  Input, 
+  OnChanges, 
+  OnInit, 
+  Output, 
+  SimpleChanges, 
+  ViewChild 
+} from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
@@ -11,7 +21,7 @@ import { ColumnsTable } from '../../models/columns';
   templateUrl: './table.component.html',
   styleUrls: ['./table.component.css']
 })
-export class TableComponent implements OnInit, AfterViewInit {
+export class TableComponent implements OnInit, AfterViewInit, OnChanges {
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
@@ -33,7 +43,12 @@ export class TableComponent implements OnInit, AfterViewInit {
   ngOnInit(): void {
   }
 
-  ngAfterViewInit() {
+  ngOnChanges(changes: SimpleChanges): void {
+      this.dataSource = changes.dataSource.currentValue;
+      this.dataSource.paginator = this.paginator;
+  }
+
+  ngAfterViewInit(): void {
     this.dataSource.paginator = this.paginator;
     this.dataSource.sort = this.sort;
   }
@@ -46,7 +61,7 @@ export class TableComponent implements OnInit, AfterViewInit {
     this.action.emit(actionData);
   }
 
-  applyFilter(event: Event) {
+  applyFilter(event: Event): void {
     const filterValue = (event.target as HTMLInputElement).value;
     this.filter.emit(filterValue);
   }

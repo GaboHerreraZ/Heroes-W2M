@@ -1,8 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { ActivatedRoute, ActivatedRouteSnapshot } from '@angular/router';
+import { ActivatedRouteSnapshot } from '@angular/router';
 import { Observable } from 'rxjs';
-import { mergeMap } from 'rxjs/operators';
 import { environment } from 'src/environments/environment';
 import { Hero } from './hero.model';
 
@@ -16,7 +15,7 @@ export class HeroService {
     this.URL = `${environment.api.endPoint}/heroes`;
   }
 
-  resolve(route: ActivatedRouteSnapshot) {
+  resolve(route: ActivatedRouteSnapshot): Observable<Hero>{
     const id = route.params['id'];
     return this.getHeroById(id);
   }
@@ -27,9 +26,9 @@ export class HeroService {
     return this.http.get<Hero[]>(url);
   }
 
-  deleteHeroById(id: number): Observable<any> {
+  deleteHeroById(id: number): Observable<Boolean> {
     const url = `${this.URL}/${id}`;
-    return this.http.delete(url);
+    return this.http.delete<Boolean>(url);
   }
 
   addHero(hero: Hero): Observable<Hero> {

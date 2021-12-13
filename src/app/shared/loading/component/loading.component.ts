@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { 
+  Component, 
+  OnInit 
+} from '@angular/core';
 import { Observable } from 'rxjs';
 import { LoadingService } from '../shared/loading.service';
 
@@ -8,7 +11,6 @@ import { LoadingService } from '../shared/loading.service';
   styleUrls: ['./loading.component.css']
 })
 export class LoadingComponent implements OnInit {
-
   
   loading$ = new Observable<boolean>();
 
@@ -18,6 +20,5 @@ export class LoadingComponent implements OnInit {
   ngOnInit(): void {
     this.loading$ = this.loadingService.loadingStatus.asObservable();
   }
-
 
 }

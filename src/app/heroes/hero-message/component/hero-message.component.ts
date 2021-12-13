@@ -1,6 +1,10 @@
-import { Component, Inject, OnInit } from '@angular/core';
-import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
-import { Hero } from '../shared/hero.model';
+import { 
+  Component, 
+  Inject, 
+  OnInit 
+} from '@angular/core';
+import { MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { Hero } from '../../shared/hero.model';
 
 @Component({
   selector: 'app-hero-message',
@@ -16,6 +20,5 @@ export class HeroMessageComponent implements OnInit {
   ngOnInit(): void {
     this.hero = this.data;
   }
-
  
 }

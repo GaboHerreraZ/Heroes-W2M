@@ -6,9 +6,9 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { RouterTestingModule } from '@angular/router/testing';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { of } from 'rxjs';
-import { HeroComponent } from '../hero/hero.component';
-import { Hero } from '../shared/hero.model';
-import { HeroService } from '../shared/hero.service';
+import { HeroComponent } from '../../hero/component/hero.component';
+import { Hero } from '../../shared/hero.model';
+import { HeroService } from '../../shared/hero.service';
 
 import { HeroListComponent } from './hero-list.component';
 

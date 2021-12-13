@@ -8,7 +8,10 @@
         "heroesList": "Heroes list",
         "deleteHero": "Delete hero",
         "questionDeleteHero1": "¿Are you sure to delete",
-        "questionDeleteHero2": " from the heroes list?"
+        "questionDeleteHero2": " from the heroes list?",
+        "delete": "Delete",
+        "close": "Close",
+        "information": "Information"
     },
     "heroTable": {
         "id": "Id",
@@ -19,7 +22,11 @@
         "power": "Power",
         "height": "Height",
         "actions": "Actions",
-        "filter": "Filter by"
+        "filter": "Filter by hero"
+    },
+    "messages": {
+        "ok": "Successful operation",
+        "noData": "There are no data to filter by"
     },
     "heroForm": {
         "back": "Back",
